@@ -1,0 +1,71 @@
+<!--
+    Author: Yumin Oung
+    Date  : 24 March 2019
+-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=utf-8 />
+    <title>Guess the word</title>
+
+    <!-- bootstrap css framework-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .row {
+            margin: 40px 0;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tile row -->
+        <div class="row" id="tiles"></div>
+
+        <!-- Guess word row-->
+        <div class="row">
+            <h3>Enter your guess</h3>
+            <div class="input-group">
+                <input type="text" id="submit_guess" class="form-control" placeholder="Enter your guess">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="check()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Game state row-->
+        <div class="row">
+            <h3>Game Board</h3>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Incorrect Guess</th>
+                        <th>Remaining Guess</th>
+                    </tr>
+                </thead>
+                <tbody id="gameboard"></tbody>
+            </table>
+        </div>
+
+        <!-- Submit word row-->
+        <div class="row">
+            <h3>Submit word</h3>
+            <div class="input-group">
+                <input type="text" id="submit_word" class="form-control" placeholder="Enter your word">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary" type="button" onclick="setWord()">Submit</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
